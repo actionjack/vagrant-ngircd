@@ -11,7 +11,7 @@ Vagrant::Config.run do |config|
     nircd_config.vm.provision :puppet do |nircdpuppet|
      nircdpuppet.manifests_path = "puppet/manifests"
      nircdpuppet.module_path    = "puppet/modules"
-     nircdpuppet.options        = "--verbose"
+     nircdpuppet.options        = "--verbose --hiera_config /vagrant/hiera.yaml"
      nircdpuppet.manifest_file  = "init.pp"
     end
   end
