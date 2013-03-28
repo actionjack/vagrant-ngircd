@@ -82,7 +82,9 @@ For my Vagrant configuration
  Get my Virtual Machine Template from the following URL:
   http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
 </pre>
+
  Let me define my virtual machine configuration:
+
 <pre>
    I want to call it "nircd",
    I would like port 6667 on my vm to be forwarded to port 6667 on my laptop, 
