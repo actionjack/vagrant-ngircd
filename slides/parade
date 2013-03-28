@@ -1,0 +1,7 @@
+title "Vagrant workflow with Puppet"
+
+theme "hack"
+
+section "Introduction" do
+  slides "vagrant-puppet-workflow.md"
+end
