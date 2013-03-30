@@ -247,7 +247,7 @@ $ vagrant destroy -f && vagrant up
 Bringing machine 'nircd' up with 'virtualbox' provider...
 [nircd] Importing base box 'nircd'...
 ```
-NB: Avoid the anti-pattern of having to run puppet X times to reach a known state
+NB: Release Confidence - Avoid the anti-pattern of having to run puppet X times to reach a known state
 
 !SLIDE transition=fade
 
