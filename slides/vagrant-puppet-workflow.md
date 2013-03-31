@@ -118,7 +118,8 @@ Successfully installed puppet-lint-0.3.2
 !SLIDE transition=fade
 
 # Fetch your module bundle
-Initialize librarian-puppet
+
+## Initialize librarian-puppet
 
 ```bash
 $ cd $vagrantbox/puppet
@@ -132,7 +133,7 @@ mod 'ntp',
    :git => 'git://github.com/puppetlabs/puppetlabs-ntp.git'
 </pre>
 
-and install modules
+## Install modules
 
 ```bash
 $ librarian-puppet install
@@ -141,19 +142,22 @@ $ librarian-puppet install
 !SLIDE transition=fade 
 
 # Hack your puppet module
-
-Clone or create your module
-
+## Clone or create your module
 ```bash
 $ cd $vagrantbox/puppet/modules 
-$ git clone git@github.com:uncommonsense/puppet-ngircd.git ngircd
-$ cd ngircd
-$ git checkout industrialisation
-$ git pull origin industrialisation
-$ cd manifest
-$ vi init.pp
+puppet module generate actionjack-ngircd
+Notice: Generating module at /tmp/actionjack-ngircd
+actionjack-ngircd
+actionjack-ngircd/Modulefile
+actionjack-ngircd/README
+actionjack-ngircd/manifests
+actionjack-ngircd/manifests/init.pp
+actionjack-ngircd/spec
+actionjack-ngircd/spec/spec_helper.rb
+actionjack-ngircd/tests
+actionjack-ngircd/tests/init.pp
 ```
-Validate and lint
+## Validate and lint
 
 ```bash
 $ puppet parser validate init.pp
@@ -224,8 +228,7 @@ $ sudo su -
 $ cd /tmp/vagrant-puppet/manifests 
 $ puppet apply --verbose --modulepath '/tmp/vagrant-puppet/modules-0' init.pp
 ```
-Hack around a little more..
-
+## Hack around a little more..
 ```bash
 $ cd /tmp/vagrant-puppet/manifests
 $ puppet apply --verbose --modulepath '/tmp/vagrant-puppet/modules-0' init.pp
