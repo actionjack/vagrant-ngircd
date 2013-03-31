@@ -29,7 +29,7 @@
 
 !SLIDE transition=fade
 
-# Bootstrapping your Environment
+# Bootstrap your Environment
 
 ```bash
 $ mkdir -p ~/vagrant/vagrant-nircd
@@ -58,7 +58,7 @@ Bringing machine 'base' up with 'virtualbox' provider...
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
   Vagrant::Config.run do |config|
-    config.vm.box_url = "http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box"
+    config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-63-x64.box"
     config.vm.define :nircd do |config|
       config.vm.box = "nircd"
       config.vm.forward_port 6667, 6667
@@ -76,43 +76,48 @@ Bringing machine 'base' up with 'virtualbox' provider...
 
 # Let's break it down
 
+## For my Vagrant configuration
 
-For my Vagrant configuration
 <pre>
  Get my Virtual Machine Template from the following URL:
-  http://developer.nrel.gov/downloads/vagrant-boxes/CentOS-6.4-x86_64-v20130309.box
+  http://puppet-vagrant-boxes.puppetlabs.com/centos-63-x64.box  
 </pre>
 
- Let me define my virtual machine configuration:
+## Let me define my virtual machine configuration:
 
 <pre>
    I want to call it "nircd",
-   I would like port 6667 on my vm to be forwarded to port 6667 on my laptop, 
-   I want to use Puppet as my config management tool with the following options:
-    my puppet manifest is stored in the $vagrantbox/puppet/manifests directory,
-    my puppet modules are stored in the $vagrantbox/puppet/modules directory,
+   I would like port 6667 on my vm to be forwarded to port 6667 on my PC, 
+   I use Puppet as my config management tool with the following options:
+    my puppet manifest is in the $vagrantbox/puppet/manifests directory,
+    my puppet modules are in the $vagrantbox/puppet/modules directory,
     I want my puppet execution run to produce verbose output,
     my puppet manifest file is called init.pp.
 </pre>
 
-!SLIDE transition=fade commandline
+!SLIDE transition=fade
 
-# Install Librarian Puppet
+# Libraries & Linting
 
 ```bash
-$ gem install librarian-puppet
+$ gem install librarian-puppet puppet-lint
 Successfully installed librarian-puppet-0.9.8
-1 gem installed
+Successfully installed puppet-lint-0.3.2
+2 gems installed
 ```
-Librarian-puppet is a bundler for your puppet infrastructure. 
+## Librarian-puppet
+### A bundler for puppet modules. 
+### Resolves, fetches, installs & isolate a project's dependencies.
+### http://librarian-puppet.com
 
-Resolves, fetches, installs, and isolate a project's dependencies.
-
-http://librarian-puppet.com
+## Puppet-lint
+### A linting tool
+### Checks that your Puppet manifest conform to the style guide
+### http://puppet-lint.com
 
 !SLIDE transition=fade
 
-# Fetching your module bundle
+# Fetch your module bundle
 Initialize librarian-puppet
 
 ```bash
