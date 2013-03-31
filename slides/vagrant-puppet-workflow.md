@@ -112,7 +112,7 @@ Successfully installed puppet-lint-0.3.2
 
 ## Puppet-lint
 ### A linting tool
-### Checks that your Puppet manifest conform to the style guide
+### Checks that your Puppet manifest conforms to the style guide
 ### http://puppet-lint.com
 
 !SLIDE transition=fade
@@ -234,19 +234,18 @@ $ cd /tmp/vagrant-puppet/manifests
 $ puppet apply --verbose --modulepath '/tmp/vagrant-puppet/modules-0' init.pp
 ```
 
-Hack about a little more..
-
+## Hack about a little more..
 ```bash
 $ cd /tmp/vagrant-puppet/manifests
 $ puppet apply --verbose --modulepath '/tmp/vagrant-puppet/modules-0' init.pp
 ```
-Working! (Don't forget to validate and lint!)
+## Working! (Don't forget to validate and lint!)
 
 !SLIDE transition=fade
 
 # Does it really work from scratch?
 
-Does everything work cleanly on a new build
+## Does everything work cleanly on a new build
 
 ```bash
 $ vagrant destroy -f && vagrant up
@@ -255,16 +254,17 @@ $ vagrant destroy -f && vagrant up
 Bringing machine 'nircd' up with 'virtualbox' provider...
 [nircd] Importing base box 'nircd'...
 ```
-NB: Release Confidence - Avoid the anti-pattern of having to run puppet X times to reach a known state
+## NB: Release Confidence
+### Avoid the anti-pattern of having to run puppet X times to reach a known state
 
 !SLIDE transition=fade
 
-# Questions and a little live demo perhaps?
+# Q & A?
 
-## Vagrant and Puppet Environment is available here:
+## The Vagrant environment and slides for this presentation can be found here: 
+### https://github.com/actionjack/vagrant-nircd.git
 
-https://github.com/actionjack/vagrant-nircd.git
-
-## Future plans 
-
-TDD your Infrastructure using [Cumberbatch](https://github.com/actionjack/cumberbatch)
+## More Automated Test Driven Infrastructure
+### [rspec-puppet](http://rspec-puppet.com)
+### TDI your Infrastructure using [Cumberbatch](https://github.com/actionjack/cumberbatch)
+### Continuous Integration using [Travis CI](https://travis-ci.org) for puppet modules
