@@ -262,9 +262,9 @@ Bringing machine 'nircd' up with 'virtualbox' provider...
 # Q & A?
 
 ## The Vagrant environment and slides for this presentation can be found here: 
-### https://github.com/actionjack/vagrant-nircd.git
+### https://github.com/actionjack/vagrant-ngircd.git
 
 ## More Automated Test Driven Infrastructure
-### [rspec-puppet](http://rspec-puppet.com)
+### Unit Testing using [rspec-puppet](http://rspec-puppet.com)
 ### TDI your Infrastructure using [Cumberbatch](https://github.com/actionjack/cumberbatch)
 ### Continuous Integration using [Travis CI](https://travis-ci.org) for puppet modules
