@@ -223,24 +223,24 @@ Notice: Finished catalog run in 64.75 seconds
 
 # Did it all work? (Y/N)
 ```bash
-$ vagrant ssh
-$ sudo su -
-$ cd /tmp/vagrant-puppet/manifests 
-$ puppet apply --verbose --modulepath '/tmp/vagrant-puppet/modules-0' init.pp
+$ gedit $vagrantbox/puppet/module/ngircd/manifests/init.pp
+$ vagrant provision
 ```
 ## Hack around a little more..
 ```bash
-$ cd /tmp/vagrant-puppet/manifests
-$ puppet apply --verbose --modulepath '/tmp/vagrant-puppet/modules-0' init.pp
+$ pushd $vagrantbox/puppet/module/ngircd/manifests
+$ puppet parser validate *.pp
+$ puppet-lint --with-filename *.pp
+$ popd
+$ vagrant provision
 ```
 
-## Hack about a little more..
+## Working? 
 ```bash
-$ cd /tmp/vagrant-puppet/manifests
-$ puppet apply --verbose --modulepath '/tmp/vagrant-puppet/modules-0' init.pp
+$ pushd $vagrantbox/puppet/module/ngircd
+$ git commit -m "Made X change" -a
+$ git push
 ```
-## Working! (Don't forget to validate and lint!)
-
 !SLIDE transition=fade
 
 # Does it really work from scratch?
