@@ -231,7 +231,6 @@ $ vagrant provision
 $ pushd $vagrantbox/puppet/module/ngircd/manifests
 $ puppet parser validate *.pp
 $ puppet-lint --with-filename *.pp
-$ popd
 $ vagrant provision
 ```
 
