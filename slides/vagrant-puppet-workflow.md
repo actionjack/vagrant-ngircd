@@ -2,7 +2,7 @@
 
 # Vagrant workflow with Puppet
 
-## Infrastructure as Code in a Sandbox
+## Test Driven Infrastructure in a Sandbox
 
 !SLIDE bullets transition=fade
 
