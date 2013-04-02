@@ -1,8 +1,8 @@
 !SLIDE 
 
 # Vagrant workflow with Puppet
-
-## Test Driven Infrastructure in a Sandbox
+## Module Testing
+### Test Driven Infrastructure in a Sandbox
 
 !SLIDE bullets transition=fade
 
