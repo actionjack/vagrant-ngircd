@@ -265,5 +265,5 @@ Bringing machine 'ngircd' up with 'virtualbox' provider...
 
 ## More Automated Test Driven Infrastructure
 ### Unit Testing using [rspec-puppet](http://rspec-puppet.com)
-### TDI your Infrastructure using [Cumberbatch](https://github.com/actionjack/cumberbatch)
+### TDI your Infrastructure using [Serverspec](http://serverspec.org/)
 ### Continuous Integration using [Travis CI](https://travis-ci.org) for puppet modules
